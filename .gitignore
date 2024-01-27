@@ -1,0 +1,6 @@
+.idea
+*.iml
+.env
+*.pyc
+dist
+sandbox
