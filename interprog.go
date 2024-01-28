@@ -3,7 +3,6 @@ package interprog
 import (
 	"fmt"
 	"github.com/gookit/color"
-	"github.com/hako/durafmt"
 	"time"
 )
 
@@ -60,5 +59,5 @@ func (ip *InterProg) Done() {
 	if ip.printedUpdate {
 		fmt.Println()
 	}
-	fmt.Printf("%s elapsed time: %v\n", ip.name, durafmt.Parse(elapsedTime).String())
+	fmt.Printf("%s elapsed time: %v\n", ip.name, formatDuration(elapsedTime))
 }

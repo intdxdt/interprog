@@ -5,7 +5,6 @@ go 1.21
 require (
 	github.com/franela/goblin v0.0.0-20211003143422-0a4f594942bf
 	github.com/gookit/color v1.5.4
-	github.com/hako/durafmt v0.0.0-20210608085754-5c1018a4e16b
 )
 
 require (
