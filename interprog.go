@@ -38,8 +38,8 @@ func (ip *InterProg) reset() *InterProg {
 	return ip
 }
 
-// update increments the counter and prints updates if needed.
-func (ip *InterProg) update(step ...int) {
+// Update increments the counter and prints updates if needed.
+func (ip *InterProg) Update(step ...int) {
 	var updateStep = 1
 	if len(step) > 0 {
 		updateStep = step[0]
@@ -54,15 +54,11 @@ func (ip *InterProg) update(step ...int) {
 	}
 }
 
-// done prints the final elapsed time.
-func (ip *InterProg) done() {
+// Done prints the final elapsed time.
+func (ip *InterProg) Done() {
 	var elapsedTime = time.Since(ip.begin)
 	if ip.printedUpdate {
 		fmt.Println()
 	}
 	fmt.Printf("%s elapsed time: %v\n", ip.name, durafmt.Parse(elapsedTime).String())
-}
-
-func main() {
-
 }

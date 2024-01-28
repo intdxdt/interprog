@@ -16,9 +16,9 @@ func TestGeom(t *testing.T) {
 			var prog = NewInterProg("progress")
 			for i := 0; i < 10000; i++ {
 				time.Sleep(1 * time.Millisecond)
-				prog.update()
+				prog.Update()
 			}
-			prog.done()
+			prog.Done()
 			var delta = time.Since(t0)
 			g.Assert(delta.Seconds() > 10).IsTrue()
 		})
